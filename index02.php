@@ -53,8 +53,10 @@ $arr2 = [
 ];
 $arr3 = [4,6,$arr2];
 
-echo $arr2[1][2];
+echo $arr3[2][1][4];
+// echo $arr2[1][2];
+
 echo "<pre>";
-print_r($arr2)
+print_r($arr3)
 
 ?>
