@@ -6,5 +6,4 @@ $arrSP = [
     ['name'=>'Samsung Galaxy S9+ 64GB','price'=>23900000,'image'=>'samsung-galaxy-s9-plus-64gb-xanh-san-ho-2-400x460.png'],
 ];
 
-
 ?>
