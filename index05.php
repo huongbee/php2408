@@ -34,21 +34,27 @@ $x = 78;
 // echo "<br>";
 // echo $x; // 78
 
-echo getA($x); // 79
-echo "<br>";
-echo $x; // 79
+// echo getA($x); // 79
+// echo "<br>";
+// echo $x; // 79
 
 strlen($str);
-echo strripos($str,'o');
+// echo strripos($str,'o');
 
-echo date_default_timezone_get();
+// echo date_default_timezone_get();
 date_default_timezone_set("Asia/Ho_Chi_Minh");
-print_r(getdate());
+// print_r(getdate());
+echo "<br>";
 
 // echo time(); // 1537367074 => 19/09/2018
-// 2018/20/11 21:50:03  =>  21:50:03 20-11-2018 
-// 2018-20-11 21:50:03 => 
+// 2018/2/20 21:50:03  =>  21:50:03 20-11-2018 
+// 2018-11-12 21:50:03 => 
 
-
+// echo date('d/m/Y',time());
+// echo "<br>";
+$date = new DateTime("2018-1-20 21:50:03");
+$timest = $date->getTimestamp();
+echo date('H:i:s d-m-Y',$timest);
+echo date('H:i:s d-m-Y',strtotime("2018-1-20 21:50:03"));
 
 ?>
