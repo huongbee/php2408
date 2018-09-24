@@ -14,4 +14,14 @@
 //     'Class'
 // ];
 // echo  implode(' ',$arr2);
+
+// define('PI',3.14);
+// define('PI',3.14231);
+
+// echo PI;
+
+if(file_exists("avatar/test02.txt")){
+    echo "Exist";
+}
+else echo 'not exist!';
 ?>
