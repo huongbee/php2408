@@ -6,7 +6,7 @@ if($image['error']>0){ // ko chon file
 }
 //co chon file
 // print_r($image);
-$des = '../avatar/'.$image['name'];
+$des = 'avatar/'.$image['name'];
 move_uploaded_file($image['tmp_name'],$des);
 
 
