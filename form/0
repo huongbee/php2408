@@ -1,0 +1,82 @@
+﻿Cach cai dat:
+
+Su dung key ben duoi
+BBCUV-UVDRC-M8C5S-CHMX7-2M3A5
+C5KGC-FZER8-5MT5C-CCDZP-2DDA4
+E5CUV-SCNDU-54GCC-CDC2T-AMEDM
+KAM4U-HU5CC-CPUCC-AGKGC-L4D6F
+Y69CD-625CK-ANM4C-HMMAD-A55MF
+HXCZE-9R4HX-CJLCC-CAHYZ-CBF4F
+9RBCV-DY69D-C3XCC-HM2DL-ADADB
+
+Sau do chay Host Modifier (Run Admin) de n tu them cac dong vao host cho ban
+
+Tiep do copy file RegInfo.ini trong phan Crack vao %programdata%\TechSmith\Camtasia Studio 9\
+
+
+Tieng anh
+
+Serial Keys:
+BBCUV-UVDRC-M8C5S-CHMX7-2M3A5
+C5KGC-FZER8-5MT5C-CCDZP-2DDA4
+E5CUV-SCNDU-54GCC-CDC2T-AMEDM
+KAM4U-HU5CC-CPUCC-AGKGC-L4D6F
+Y69CD-625CK-ANM4C-HMMAD-A55MF
+HXCZE-9R4HX-CJLCC-CAHYZ-CBF4F
+9RBCV-DY69D-C3XCC-HM2DL-ADADB
+
+
+
+
+     Unpack, install the application.
+
+
+     Use either of the following two methods to register the application.
+
+
+     METHOD #1
+
+     Remove all techsmith blocked entries from the hosts file.
+	 
+     If you've previously blocked this product hosts, your hosts file
+     should contain the following entries - remove them.
+
+     127.0.0.1    www.techsmith.com
+     127.0.0.1    activation.cloud.techsmith.com
+     127.0.0.1    oscount.techsmith.com
+     127.0.0.1    updater.techsmith.com
+     127.0.0.1    camtasiatudi.techsmith.com
+     127.0.0.1    tsccloud.cloudapp.net
+     127.0.0.1    assets.cloud.techsmith.com
+	 
+     NOTE! Without removing the entries, the registration will not be
+     completed.	 
+
+     Completely block the program executables in your firewall
+
+     <install dir>\CamtasiaStudio.exe
+     <install dir>\CamRecorder.exe
+
+     Launch the application, and use Above Keys to register it.
+
+
+     METHOD #2
+
+     Add the following entries to your hosts file
+
+     127.0.0.1    www.techsmith.com
+     127.0.0.1    activation.cloud.techsmith.com
+     127.0.0.1    oscount.techsmith.com
+     127.0.0.1    updater.techsmith.com
+     127.0.0.1    camtasiatudi.techsmith.com
+     127.0.0.1    tsccloud.cloudapp.net
+     127.0.0.1    assets.cloud.techsmith.com
+
+Or Simply Run "Host Modifier.bat" Ad Admin
+
+     Copy the RegInfo.ini From Crack Folder And Replace to
+     %programdata%\TechSmith\Camtasia Studio 9\
+     overwriting existing file if necessary.
+
+     Launch the application.
+
