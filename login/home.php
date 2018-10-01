@@ -10,17 +10,20 @@ if(!isset($_SESSION['user'])){
         $_SESSION['error'] = "Vui lòng đăng nhập, cookie";
         header('Location:login.php');
     }
+    if(isset($_COOKIE['user'])){
+        $_SESSION['user'] = $_COOKIE['user'];//luu lai phien lam viec
+        setcookie('user',$_SESSION['user'],time()+180);
+        echo 'use cookie';
+    }
 }
 else{
     if($_SESSION['user']!='admin'){
         $_SESSION['error'] = "Vui lòng đăng nhập";
         header('Location:login.php');
     }
+    echo 'use session';
 }
-if(isset($_COOKIE['user'])){
-    $_SESSION['user'] = $_COOKIE['user'];//luu lai phien lam viec
-    setcookie('user',$_SESSION['user'],time()+180);
-}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
