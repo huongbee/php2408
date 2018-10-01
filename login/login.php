@@ -28,7 +28,7 @@
                 <?php
                 endif            
                 ?>
-                <form action="xulylogin.php" method="post">
+                <form action="xulylogin.php" method="post" >
                     <div class="form-group">
                         <label for="username">Username:</label>
                         <input type="text" name="username" placeholder="Enter username" class="form-control">

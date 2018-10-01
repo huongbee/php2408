@@ -6,6 +6,9 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 
     if($_POST['username']=='admin' && md5('khoaphamtraining'.md5($_POST['password']))==$hash){
         $_SESSION['user'] = $_POST['username'];
+        if(isset($_POST['remember']) && $_POST['remember']==1){
+            setcookie('user',$_POST['username'],time()+180);
+        }
         header('Location:home.php');
     }
     else{
