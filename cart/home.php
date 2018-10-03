@@ -30,7 +30,7 @@ require "sanpham.php";
                 </div>
                 <div class="name"><?=$sp['name']?></div>
                 <div class="price"><?=number_format($sp['price'])?> vnd</div>
-                <div class="add-to-cart">Thêm vào giỏ hàng</div>
+                <div class="add-to-cart" data-id="<?=$sp['id']?>">Thêm vào giỏ hàng</div>
             </div>
         <?php
         endforeach
@@ -43,27 +43,17 @@ require "sanpham.php";
     $(document).ready(function(){
     
         $('.add-to-cart').click(function(){
-            // $.post('cart.php',{
-            //         id:12,
-            //         name:'Iphone X'
-            //     },
-            //     function(response){
-            //         // console.log(typeof response)
-            //         res = JSON.parse(response)
-            //         console.log(res) //{id: "12", name: "Iphone X"}
-            //         console.log(res.id) //12
-            // })
+            var idSP = $(this).attr('data-id')
             $.ajax({
-                url:'cart.php',
+                url:'xulymuahang.php',
                 type:'POST',
                 data:{
-                    id:5,
-                    name:'Iphone 8'
+                    id:idSP
                 },
                 success:function(response){
                     res = JSON.parse(response)
                     console.log(res) 
-                    console.log(res.id) 
+                   
                 },
                 error:function(err){
                     console.log(err)
