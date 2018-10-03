@@ -13,6 +13,20 @@ require "sanpham.php";
 // print_r($arrSP);
 ?>
 <body>
+    <h2 class="soluong">
+
+    <?php
+    session_start();
+    $total = 0;
+    if(isset($_SESSION['cart'])){
+        foreach($_SESSION['cart'] as $sp){
+            $total +=$sp['soluong'];
+        }
+    }
+    
+    echo $total;
+    ?>
+    </h2>
     <div class="content">
         <?php 
         foreach($arrSP as $sp):
@@ -51,9 +65,12 @@ require "sanpham.php";
                     id:idSP
                 },
                 success:function(response){
-                    res = JSON.parse(response)
-                    console.log(res.data)
-                    alert(res.message)
+                    console.log(response)
+                    // res = JSON.parse(response)
+                    // $('.soluong').html(res.data.total)
+                    // alert(res.message)
+                    // console.log(res.data.view)
+
                 },
                 error:function(err){
                     console.log(err)

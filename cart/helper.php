@@ -1,7 +1,7 @@
 <?php
 
 function searchProduct(int $id, array $arrSP){
-    
+
     foreach($arrSP as $item){
         if($item['id'] == $id){
             return $item;
@@ -10,5 +10,9 @@ function searchProduct(int $id, array $arrSP){
     return false;
 }
 
+
+function callView(){
+    return "<h2>rtrt</h2>";
+}
 
 ?>

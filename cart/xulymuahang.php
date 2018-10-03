@@ -18,10 +18,18 @@ if($sp){
         $sp['soluong'] = 1;
         $_SESSION['cart'][$id] = $sp;
     }
+    
+    $total = 0;
+    foreach($_SESSION['cart'] as $sp){
+        $total +=$sp['soluong'];
+    }
 
     echo json_encode([
         'code'=>1,
-        'data'=>$_SESSION['cart'],
+        'data'=>[
+            'total'=>$total,
+            'view'=>callView()
+        ],
         'message'=>'Them thanh cong'
     ]);
 }
