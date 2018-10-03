@@ -52,8 +52,8 @@ require "sanpham.php";
                 },
                 success:function(response){
                     res = JSON.parse(response)
-                    console.log(res) 
-                   
+                    console.log(res.data)
+                    alert(res.message)
                 },
                 error:function(err){
                     console.log(err)
