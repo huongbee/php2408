@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+body{
+    background-color: #c9ffd5
+}
+.content{
+    width: 1230px;
+    margin: auto
+}
+.item{
+    width: 400px;
+    margin: 20px 5px;
+    float: left;
+    background-color: #fff;
+    height: 345px;
+}
+.image{
+    width: 35%;
+    float: left;
+}
+.image img{
+    width: 100%;
+    padding:20px 0 
+}
+.info{
+    width: 65%;
+    float: left;
+    /* padding-left: 10px */
+}
+.info .name{
+    font-size: 25px;
+    padding-top: 20px;
+}
+.info .name , .info p{
+    padding-left: 15px
+}
+.item>.name{
+    color: blue;
+}
+.price, .item>.name{
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 20px;
+    /* font-family: 'Pacifico', cursive; */
+}
+
+.price{
+    padding-top:10px ;
+    padding-bottom: 10px
+}
+.promotion{
+    color: red
+}
+.item>.name:hover{
+    color: blueviolet;
+    cursor: pointer;
+}
+
+.add-to-cart{
+    background-color: cadetblue;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 0px;
+    text-transform: uppercase
+}
+/* https://fontawesome.com/icons */
