@@ -20,6 +20,7 @@ class User{
     }
 }
 
+
 class Sinhvien extends User{
     // public $name = "Son";
 
