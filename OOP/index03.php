@@ -16,12 +16,16 @@ class User{
         echo '<br>';
         echo __METHOD__. ' duoc goi';
         echo '<br>';
+        echo __FUNCTION__. ' duoc goi';
+        echo '<br>';
         echo __CLASS__ .' da bi huy';
     }
 }
 
-$userA = new User('Nguyen Van A');
-echo "<br><b>".$userA->name."</b>";
+
+
+// $userA = new User('Nguyen Van A');
+// echo "<br><b>".$userA->name."</b>";
 
 // var_dump($userA);
 
