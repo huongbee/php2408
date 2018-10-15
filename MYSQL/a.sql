@@ -65,3 +65,45 @@ UPDATE bills
 SET date_delivery='2018-5-25 14:20:10',
     status=2
 WHERE id=3 OR id=4
+
+
+DELETE FROM customers 
+WHERE email='user@yahoo.com' AND id=2; 
+
+SELECT *
+FROM customers
+WHERE name = 'Phuong'
+
+
+SELECT *
+FROM customers
+WHERE name LIKE '%Phuong%'
+
+id IN (2,4,6)
+NOT IN (32,5,3)
+LIKE
+NOT LIKE
+AND 
+OR
+BETWEEN 100 AND 200
+>= 100 AND <=200
+column is NULL
+
+
+SELECT column
+FROM table 
+WHERE dk (cho select)
+GROUP BY column 
+HAVING dk (cho group by) 
+ORDER BY column ASC|DESC
+LIMIT 0,10  --0:position, 10:qty
+
+
+-- position = (page-1)*qty
+-- p=1      0,8
+-- p=2      8,8
+-- p=3      16,8
+-- p=4      24,8
+-- p=5      32,8  
+-- ... 
+-- p=99     784,8
