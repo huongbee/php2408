@@ -107,3 +107,43 @@ LIMIT 0,10  --0:position, 10:qty
 -- p=5      32,8  
 -- ... 
 -- p=99     784,8
+
+
+-- sum()
+-- count()
+-- avg()
+-- min()
+-- max()
+
+--C1:
+SELECT columns
+FROM table1, table2, table3
+WHERE table1.PK = table2.FK
+AND  table2.FK = table3.PK
+
+
+--C2:
+SELECT columns
+FROM table1
+INNER JOIN table2
+ON table1.PK = table2.FK
+INNER JOIN table3
+ON table3.PK = table2.FK
+WHERE 
+
+
+SELECT columns
+FROM table1
+LEFT JOIN table2
+ON table1.PK = table2.FK
+
+SELECT columns
+FROM table1
+RIGHT JOIN table2
+ON table1.PK = table2.FK
+
+
+SELECT columns
+FROM table1
+OUTER JOIN table2
+ON table1.PK = table2.FK
