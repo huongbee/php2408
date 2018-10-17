@@ -26,12 +26,25 @@ catch(\Exception $e){
 //     var_dump($result); //false | int(0)
 // }
 
+// $data = [
+//     'hinh-2.png',
+//     'http://.....',
+//     'Khuyen mai...'
+// ];
+// $sql = "INSERT INTO slide(image,link,title) 
+//         VALUES(?,?,?)";
 
+
+$data = [
+    ':image'=>'hinh-2.png',
+    ':link'=>'http://.....',
+    ':title'=>'Khuyen mai...'
+];
 $sql = "INSERT INTO slide(image,link,title) 
-        VALUES('hinh-1.png','http://....', 'Khuyến mãi 30% nhân dịp 20/10')";
+VALUES(:image,:link,:title)";
 
 $sttm = $db->prepare($sql);
-$check = $sttm->execute();
+$check = $sttm->execute($data);
 if($check){
     echo "thanh cong";
 }
