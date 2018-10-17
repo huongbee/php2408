@@ -147,3 +147,6 @@
 -- FROM table1
 -- OUTER JOIN table2
 -- ON table1.PK = table2.FK
+
+
+
