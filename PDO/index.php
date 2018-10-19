@@ -80,31 +80,62 @@ catch(\Exception $e){
 
 
 
-$image = 'hinh-a.png';
-$link = 'http://...';
-$title = 'Hinh a';
+// $image = 'hinh-a.png';
+// $link = 'http://...';
+// $title = 'Hinh a';
 
-$sql = "INSERT INTO slide(image,link,title) 
-VALUES(:image,:link,:title)";
+// $sql = "INSERT INTO slide(image,link,title) 
+// VALUES(:image,:link,:title)";
 
+// $sttm = $db->prepare($sql);
+
+// $sttm->bindParam(':image',$image);
+// $sttm->bindParam(':link',$link);
+// $sttm->bindParam(':title',$title);
+
+// // $sttm->bindValue(':image','Hinh-c.gif');
+// // $sttm->bindValue(':link','https://thegioididong.com/');
+// // $sttm->bindValue(':title','Mung 20/10');
+
+// $check = $sttm->execute();
+
+// if($check){
+//     echo "thanh cong";
+// }
+// else{
+//     echo 'that bai';
+// }
+// SELECT * FROM slide WHERE id>=10
+
+$sql = "SELECT * FROM slide WHERE id>=?";
 $sttm = $db->prepare($sql);
-
-$sttm->bindParam(':image',$image);
-$sttm->bindParam(':link',$link);
-$sttm->bindParam(':title',$title);
-
-// $sttm->bindValue(':image','Hinh-c.gif');
-// $sttm->bindValue(':link','https://thegioididong.com/');
-// $sttm->bindValue(':title','Mung 20/10');
-
+$sttm->bindValue(1,10);
 $check = $sttm->execute();
 
 if($check){
-    echo "thanh cong";
+    // $result = $sttm->fetch(); //return 1 row
+    // $result = $sttm->fetchAll(PDO::FETCH_ASSOC); // return >1 row
+
+    // foreach($result as $value){
+    //     echo $value['title'];
+    //     echo "<br>";
+    // }
+
+    // $result = $sttm->fetchAll(PDO::FETCH_BOTH); // return >1 row
+    // $result = $sttm->fetchAll(PDO::FETCH_NUM);
+    // foreach($result as $value){
+    //     echo $value[3];
+    //     echo "<br>";
+    // }
+    $result = $sttm->fetchAll(PDO::FETCH_OBJ);
+    foreach($result as $value){
+        echo $value->title;
+        echo "<br>";
+    }
+    // print_r($result);
 }
 else{
     echo 'that bai';
 }
-
 
 ?>
