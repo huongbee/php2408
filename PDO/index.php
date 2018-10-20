@@ -26,14 +26,21 @@ catch(\Exception $e){
 //     var_dump($result); //false | int(0)
 // }
 
-// $data = [
-//     'hinh-2.png',
-//     'http://.....',
-//     'Khuyen mai...'
-// ];
-// $sql = "INSERT INTO slide(image,link,title) 
-//         VALUES(?,?,?)";
-
+$data = [
+    'hinh-2.png',
+    'http://.....',
+    'Khuyen mai...'
+];
+$sql = "INSERT INTO slide(image,link,title) 
+        VALUES(?,?,?)";
+$sttm = $db->prepare($sql);
+$check = $sttm->execute($data);
+if($check){
+    echo "thanh cong";
+}
+else{
+    echo 'that bai';
+}
 
 // $data = [
 //     ':image'=>'hinh-2.png',
