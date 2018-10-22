@@ -24,9 +24,19 @@ include_once 'DBConnect.php';
 // }
 
 
-$sql = 'SELECT * FROM users WHERE id=? OR id > ?';
+// $sql = 'SELECT * FROM users WHERE id=? OR id > ?';
+// $db = new DBConnect();
+// $result = $db->loadMoreRow($sql,[1,6]);
+// if($result){
+//     print_r($result);
+// }
+// else{
+//     var_dump($result);
+// }
+
+$sql = 'SELECT * FROM users WHERE id=?';
 $db = new DBConnect();
-$result = $db->loadMoreRow($sql,[1,6]);
+$result = $db->loadOneRow($sql,[1]);
 if($result){
     print_r($result);
 }

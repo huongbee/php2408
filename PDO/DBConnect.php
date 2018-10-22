@@ -15,7 +15,6 @@ class DBConnect{
         }
     }
 
-    
     //for INSERT/UPDATE/DELETE
     function executeQuery($sql, $data = []){
         $sttm = $this->db->prepare($sql);
