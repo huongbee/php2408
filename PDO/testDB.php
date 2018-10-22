@@ -2,7 +2,7 @@
 
 include_once 'DBConnect.php';
 
-$db = new DBConnect();
+// $db = new DBConnect();
 
 //C1
 // $sql = 'UPDATE slide SET title =?, image=? WHERE id=?';
@@ -14,12 +14,23 @@ $db = new DBConnect();
 //$r = $db->executeQuery($sql,$data);
 
 //C2
-$sql = 'UPDATE slide SET title ="12wertt" WHERE id=13';
-$r = $db->executeQuery($sql);
-if($r){
-    echo "thanh cong";
+// $sql = 'UPDATE slide SET title ="12wertt" WHERE id=13';
+// $r = $db->executeQuery($sql);
+// if($r){
+//     echo "thanh cong";
+// }
+// else{
+//     echo 'that bai';
+// }
+
+
+$sql = 'SELECT * FROM users WHERE id=? OR id > ?';
+$db = new DBConnect();
+$result = $db->loadMoreRow($sql,[1,6]);
+if($result){
+    print_r($result);
 }
 else{
-    echo 'that bai';
+    var_dump($result);
 }
 ?>

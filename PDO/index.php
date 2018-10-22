@@ -114,9 +114,10 @@ else{
 // }
 // SELECT * FROM slide WHERE id>=10
 
-$sql = "SELECT * FROM slide WHERE id>=?";
+$sql = "SELECT * FROM slide WHERE id>=? OR id=?";
 $sttm = $db->prepare($sql);
 $sttm->bindValue(1,10);
+$sttm->bindValue(2,10);
 $check = $sttm->execute();
 
 if($check){
